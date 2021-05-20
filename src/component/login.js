@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { auth, database } from "firebase";
-import { Flex, Box, Button, Image, Text, Alert, AlertIcon } from "@chakra-ui/core";
-
+import { Button, Image} from "@chakra-ui/core";
+import "./login.css";
 
 class Login extends Component {
   constructor(props) {
@@ -64,32 +64,26 @@ class Login extends Component {
   render() {
     return (
       <React.Fragment>
-        <Flex bg="gray.200" flexDirection="column" justifyContent="center" alignItems="center" textAlign="center" h="100vh">
-          <Alert
-            status="error"
-            marginBottom={10}
-            style={{ display: this.state.error ? "block" : "none" }}
-          >
-            <AlertIcon />
-            {this.state.errorMessage}
-          </Alert>
-          <Box
+      <div>
+        <div bg="red.200" flexDirection="column" justifyContent="center" alignItems="center" textAlign="center" h="100vh">
+         <div>
+          <div
             display="flex"
             flexDirection="column"
             alignItems="center"
             justifyContent="center"
-            bg="white"
+            bg="red"
             padding="50px"
             shadow="md"
             rounded="md"
           >
-            <Image
-              src="/cat.png"
+            <img width="400px"
+              src="/logo4.png"
               alt="logo"
             />
-            <Text marginTop={2} fontWeight={600} fontSize="2.5rem" color="orange.300">
+            <p marginTop={2} fontWeight={600} fontSize="2.5rem" color="orange.300">
               Cat Chat
-            </Text>
+            </p>
             <Button
               onClick={this.loginWithGmail}
               variantColor="teal"
@@ -101,8 +95,34 @@ class Login extends Component {
                 alt="signin-google"
               />
             </Button>
-          </Box>
-        </Flex>
+          </div>
+
+          <div className="col-sm-6 forms-right-icons">
+						<div className="row">
+							<div className="col-sm-2 icon"><i className="fas fa-users"></i></div>
+							<div className="col-sm-10">
+								<h3 className="Text">New Features</h3>
+								<p>Seeing the current situation of COVID-19 in the country, we formed a group of volunteers that will help you in any possible way.</p>
+							</div>
+						</div>
+						<div className="row">
+							<div className="col-sm-2 icon"><i className="far fa-eye"></i></div>
+							<div className="col-sm-10">
+								<h3>Easy To Use</h3>
+								<p>A user-friendly and simple application through which one could easily ask for help and chat with anyone.</p>
+							</div>
+						</div>
+						<div className="row">
+							<div className="col-sm-2 icon"><i className="fab fa-twitter"></i></div>
+							<div className="col-sm-10">
+								<h3>Social Integrated</h3>
+							</div>
+						</div>
+            </div>
+                    </div>
+        </div>
+        
+                </div>
       </React.Fragment >
     );
   }

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Box, Flex } from "@chakra-ui/core"
 import Message from "./min-component/message";
 import Header from "./min-component/header";
-import UsersList from "./min-component/usersList";
 import { database } from "firebase";
 
 class Home extends Component {
@@ -151,13 +150,14 @@ class Home extends Component {
                                 logout={this.props.logout}
                             />
                             <Flex align="center" justifyContent="center">
-                                <UsersList
+                                {/* <UsersList
                                     userId={this.state.userId}
                                     usersList={this.state.usersList}
                                     selectUser={this.selectUser}
                                     getMessageFromRoom={this.getMessageFromRoom}
                                     loadingData={this.state.loadingData}
-                                />
+                                /> */}
+
                                 <Message
                                     userId={this.state.userId}
                                     userName={this.state.userName}

@@ -1,24 +1,16 @@
 import React, { Component } from "react";
 import { Box, Input, InputGroup, InputRightElement, Button, Text, Grid } from "@chakra-ui/core"
-import { emojis } from "./emoji";
 import { database } from "firebase";
 
 class InputBox extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            emoji: emojis,
-            showEmoji: false,
+            
             text: ""
         }
     }
-    emojiToggle = () => {
-        this.setState({ showEmoji: !this.state.showEmoji })
-    }
-    selectEmoji = (emo) => {
-        let prevText = this.state.text;
-        this.setState({ text: prevText + emo })
-    }
+   
     sendMessage = (event) => {
         event.preventDefault();
         if (this.state.text.trim() !== "") {
@@ -47,40 +39,19 @@ class InputBox extends Component {
                                 bg="white"
                                 _focus={{ boxShadow: "none" }}
                                 _hover={{ borderTop: "1px solid teal" }}
-                                onFocus={() => this.setState({ showEmoji: false })}
+                                onFocus={() => this.setState()}
                                 onChange={(e) => { this.setState({ text: e.target.value }) }}
                                 value={this.state.text}
                             />
                             <InputRightElement h="100%">
-                                <Button background="none" _hover="none" onClick={this.emojiToggle}>
-                                    <Text fontSize="2xl">☺</Text>
+                                <Button background="none" _hover="none" >
+                                    {/* <Text fontSize="2xl">☺</Text> */}
                                 </Button>
                             </InputRightElement>
                         </InputGroup>
                     </form>
                 </Box>
-                <Box
-                    position="absolute"
-                    bottom="50px"
-                    right="0px"
-                    w="50%"
-                    h="200px"
-                    overflowX="auto"
-                    bg="white"
-                    shadow="md"
-                    roundedTop="md"
-                    style={{ display: this.state.showEmoji ? "block" : "none" }}
-                >
-                    <Grid templateColumns="repeat(6, 1fr)" padding="5px" textAlign="center">
-                        {this.state.emoji.map((emo, i) =>
-                            <Box
-                                key={i}
-                                cursor="pointer"
-                                onClick={() => this.selectEmoji(emo)}
-                            >{emo}</Box>
-                        )}
-                    </Grid>
-                </Box>
+               
             </React.Fragment>
         )
     }
