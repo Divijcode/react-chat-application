@@ -1,3 +1,48 @@
-.test{
+.text{
     color : red
 }
+.container {
+    display: flex;
+}
+h1, h2 {
+	margin-top: 10px;
+	font-size: 34px;
+    font-weight: 100;
+    color: #555;
+    line-height: 48px;
+}
+
+h3 {
+	font-size: 20px;
+    font-weight: 300;
+    color: #555;
+    line-height: 26px;
+}
+
+body{
+    background: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #888;
+    line-height: 28px;
+    text-align: center;
+	overflow: hidden;
+}
+   body, html {
+    height: 100%;
+    margin: 0;
+}
+.bg {
+    /* The image used */
+    background-image: url("/1.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  

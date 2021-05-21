@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { auth, database } from "firebase";
 import { Button, Image} from "@chakra-ui/core";
 import "./login.css";
+import GoogleButton from 'react-google-button'
 
 class Login extends Component {
   constructor(props) {
@@ -64,44 +65,29 @@ class Login extends Component {
   render() {
     return (
       <React.Fragment>
-      <div>
-        <div bg="red.200" flexDirection="column" justifyContent="center" alignItems="center" textAlign="center" h="100vh">
-         <div>
-          <div
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="center"
-            bg="red"
-            padding="50px"
-            shadow="md"
-            rounded="md"
-          >
-            <img width="400px"
+      <div  className="align-middle">
+        <div  className="bg mt-2 col-md-12 align-middle" style={{
+  height: '100vh',
+      
+      }} bg="red.200" flexDirection="column" justifyContent="center" alignItems="center" textAlign="center" h="300vh">
+         <div className="container" >
+         
+            <img style={{float:'right'}} width="400px"
               src="/logo4.png"
               alt="logo"
             />
-            <p marginTop={2} fontWeight={600} fontSize="2.5rem" color="orange.300">
-              Cat Chat
-            </p>
-            <Button
-              onClick={this.loginWithGmail}
-              variantColor="teal"
-              size="lg"
-              marginTop={5}
-            >
-              <Image
-                src="https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png"
-                alt="signin-google"
-              />
-            </Button>
-          </div>
-
-          <div className="col-sm-6 forms-right-icons">
+             <img width="400px"
+              src="/login.png"
+              alt="logo"
+            />
+           
+         
+         
+          <div className="col-sm-6 forms-right-icons" align="bottom">
 						<div className="row">
 							<div className="col-sm-2 icon"><i className="fas fa-users"></i></div>
 							<div className="col-sm-10">
-								<h3 className="Text">New Features</h3>
+								<h3>New Features</h3>
 								<p>Seeing the current situation of COVID-19 in the country, we formed a group of volunteers that will help you in any possible way.</p>
 							</div>
 						</div>
@@ -118,6 +104,9 @@ class Login extends Component {
 								<h3>Social Integrated</h3>
 							</div>
 						</div>
+            <GoogleButton
+ onClick={this.loginWithGmail}
+/>
             </div>
                     </div>
         </div>
