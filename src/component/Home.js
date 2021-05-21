@@ -2,7 +2,13 @@ import React, { Component } from "react";
 import { Box, Flex } from "@chakra-ui/core"
 import Message from "./min-component/message";
 import Header from "./min-component/header";
-import { database } from "firebase";
+import * as firebase from "firebase/app";
+
+import {database} from "firebase/app";
+// import "firebase/database";
+// // import firebase from "firebase/app";
+// // require('firebase/auth');
+// // require('firebase/database');
 
 class Home extends Component {
     constructor(props) {

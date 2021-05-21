@@ -1,8 +1,16 @@
 import React, { Component } from "react";
-import { auth, database } from "firebase";
+import * as firebase from "firebase/app";
+import {database,auth} from "firebase/app";
 import { Button, Image} from "@chakra-ui/core";
-import "./login.css";
 import GoogleButton from 'react-google-button'
+
+import "./login.css";
+// require('firebase/auth');
+// // import "firebase\auth";
+// require('firebase/database');
+
+// import "firebase\database";
+
 
 class Login extends Component {
   constructor(props) {

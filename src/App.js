@@ -21,7 +21,7 @@ class App extends Component {
   UNSAFE_componentWillMount() {
     let user = JSON.parse(localStorage.getItem("user"));
     if (user) {
-      this.setState({ authenticated: true, user })
+      this.setState({ authenticated: false, user })
     }
   }
   isLogin = (user) => {
