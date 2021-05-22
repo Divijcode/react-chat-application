@@ -74,7 +74,7 @@ class Login extends Component {
   render() {
     return (
       <div>
-      <div  classNameName="align-middle">
+      {/* <div  classNameName="align-middle">
         <div  classNameName="bg mt-2 col-md-12 align-middle" style={{
   height: '100vh',
       
@@ -120,8 +120,8 @@ class Login extends Component {
                     </div>
         </div>
         
-                </div>
-                {/* <div className="container">
+                </div> */}
+                <div className="container">
         <div className="card">
             <div className="card-body">
                 <div className="circle"></div>
@@ -183,7 +183,7 @@ class Login extends Component {
 							</div>
 						</div>
                     </div>
-	</div> */}
+	</div>
                
       </div >
     );
