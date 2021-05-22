@@ -3,6 +3,8 @@ import { ThemeProvider, CSSReset } from "@chakra-ui/core";
 import CustomTheme from "./theme";
 import Login from "./component/login";
 import Home from "./component/Home";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "react-bootstrap/dist/react-bootstrap.min.js";
 import {
   BrowserRouter as Router,
   Switch,
