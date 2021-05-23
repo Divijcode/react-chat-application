@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Box, Flex } from "@chakra-ui/core"
 import Message from "./min-component/message";
 import Header from "./min-component/header";
-import * as firebase from "firebase/app";
-
+import * as firebase from "firebase";
+import Welcome from "./Welcome";
 import {database} from "firebase/app";
 // import "firebase/database";
 // // import firebase from "firebase/app";

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Box, Input, InputGroup, InputRightElement, Button, Text, Grid } from "@chakra-ui/core"
-import { database } from "firebase/app";
+import { database } from "firebase";
 // require('firebase/database');
 // import "firebase/database";
 // require('firebase/database');

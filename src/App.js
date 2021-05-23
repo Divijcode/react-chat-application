@@ -5,6 +5,8 @@ import Login from "./component/login";
 import Home from "./component/Home";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "react-bootstrap/dist/react-bootstrap.min.js";
+import Welcome from "./component/Welcome";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -50,7 +52,9 @@ class App extends Component {
             <PrivateRoute
               path="/chat"
               authenticated={this.state.authenticated}
-              component={() => <Home user={this.state.user} logout={this.isLogout} />}
+              // component={() => <Home user={this.state.user} logout={this.isLogout} />}
+              component={() => <Welcome user={this.state.user} logout={this.isLogout} authenticated={this.state.authenticated}/>}
+
             />
           </Switch>
         </Router>

@@ -12,24 +12,16 @@ body
     align-items: center;
     justify-content: center;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-.container{
-    display: flex;
-    max-width:400px;
-    border-radius: 20px;
-	margin-left: 200px;
-} 
+.h3, h3 {
+    font-size: 1.75rem !important;
+}
 
 .container-text{
 	margin-left: 100px;
 }
 .card{
-    border-radius: 20px;
+    border-radius: 20px !important;
     height:600px;
     background-image: linear-gradient(to right, #9932CC, #DA70D6);
     border:none;
@@ -63,20 +55,20 @@ body
 .far{
     font-size:40px;
 }
-.fas{
+.fasleft{
     position:relative;
     display:block;
     left:-87px;
     top:30px;
     color:rgb(255,255,255);
 }
-.button{
-    width:250px;
-    border-radius: 25px;
-    background-image: linear-gradient(to right, #9932CC, #DA70D6);
-    color:#fff;
-    font-weight: 700;
-    cursor: pointer;
+.button {
+    width: 250px !important;
+    border-radius: 25px !important;
+    background-image: linear-gradient(to right, #9932CC, #DA70D6) !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
 }
 .myInput{
     width:220px;
