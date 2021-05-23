@@ -31,21 +31,11 @@ class Welcome extends Component {
             <Route exact path="/">
               {this.state.authenticated === true
                 ? <Redirect to='/chat' />
-                : <div >
-                <h1 class="jt --debug">
-  <span class="jt__row">
-    <span class="jt__text">WELCOME {this.props.user.userName}</span>
-  </span>
-  <span class="jt__row jt__row--sibling" aria-hidden="true">
-    <span class="jt__text">WELCOME {this.props.user.userName}</span>
-  </span>
-  <span class="jt__row jt__row--sibling" aria-hidden="true">
-    <span class="jt__text">WELCOME {this.props.user.userName}</span>
-  </span>
-  <span class="jt__row jt__row--sibling" aria-hidden="true">
-    <span class="jt__text">WELCOME {this.props.user.userName}</span>
-  </span>
-</h1>
+                : <div style={{color:"black"}}>
+                <div>
+                <h1 class="black-lives-matter">Welcome {this.props.user.userName}</h1>
+                {/* <h1 class="black-lives-matter"></h1> */}
+</div>
 
 <label> 
                             <a className="btn btn-google text-uppercase form-control button" href="#" onClick={this.goTo}><i className="fab fa-google"></i>&nbsp;Proceed</a>  
