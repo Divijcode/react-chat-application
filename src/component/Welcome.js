@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
 import "./Welcome.css";
 import Home from "./Home";
 import {
@@ -31,51 +33,56 @@ class Welcome extends Component {
             <Route exact path="/">
               {this.state.authenticated === true
                 ? <Redirect to='/chat' />
-                : <div style={{color:"black"}}>
+                :<div className="login-div">
+
+<div style={{color:"black"}}>
                 <div>
-                <h1 class="black-lives-matter">Welcome {this.props.user.userName}</h1>
+                <h1 className="black-lives-matter">Welcome {this.props.user.userName}</h1>
                 {/* <h1 class="black-lives-matter"></h1> */}
 </div>
 
-<label> 
+
+                            <div className="dropdown d-flex justify-content-center align-items-center">
+                                <button type="button" className="btn btn-primary btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                 Select Your State
+                                </button>
+                                <div className="dropdown-menu">
+                                  <a className="dropdown-item" href="#">Andhra Pradesh</a>
+                                  <a className="dropdown-item" href="#">Arunachal Pradesh</a>
+                                  <a className="dropdown-item" href="#">Assam</a>
+                                  <a className="dropdown-item" href="#">Bihar</a>
+                                  <a className="dropdown-item" href="#">Chattisgarh</a>
+                                  <a className="dropdown-item" href="#">Chandigarh</a>
+                                  <a className="dropdown-item" href="#">Goa</a>
+                                  <a className="dropdown-item" href="#">Gujarat</a>
+                                  <a className="dropdown-item" href="#">Haryana</a>
+                                  <a className="dropdown-item" href="#">Himachal Pradesh</a>
+                                  <a className="dropdown-item" href="#">Jharkhand</a>
+                                  <a className="dropdown-item" href="#">Karnataka</a>
+                                  <a className="dropdown-item" href="#">Kerala</a>
+                                  <a className="dropdown-item" href="#">Madhya Pradesh</a>
+                                  <a className="dropdown-item" href="#">Maharashtra</a>
+                                  <a className="dropdown-item" href="#">Manipur</a>
+                                  <a className="dropdown-item" href="#">Meghalaya</a>
+                                  <a className="dropdown-item" href="#">Mizoram</a>
+                                  <a className="dropdown-item" href="#">Nagaland</a>
+                                  <a className="dropdown-item" href="#">Odhisa</a>
+                                  <a className="dropdown-item" href="#">Punjab</a>
+                                  <a className="dropdown-item" href="#">Rajasthan</a>
+                                  <a className="dropdown-item" href="#">Sikkim</a>
+                                  <a className="dropdown-item" href="#">Tamil Nadu</a>
+                                  <a className="dropdown-item" href="#">Telangana</a>
+                                  <a className="dropdown-item" href="#">Uttar Pradesh</a>
+                                  <a className="dropdown-item" href="#">UttaraKhand</a>
+                                  <a className="dropdown-item" href="#">West Bengal</a>
+                                </div>
+                              </div>
+                              <br/><br/>
+                              <label className="d-flex justify-content-center align-items-center"> 
                             <a className="btn btn-google text-uppercase form-control button" href="#" onClick={this.goTo}><i className="fab fa-google"></i>&nbsp;Proceed</a>  
                             </label>
-                            <div className="dropdown">
-  <button type="button" className="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-    Dropdown button
-  </button>
-  <div className="dropdown-menu">
-    <a className="dropdown-item" href="#">Andhra Pradesh</a>
-    <a className="dropdown-item" href="#">Arunachal Pradesh</a>
-    <a className="dropdown-item" href="#">Assam</a>
-<a className="dropdown-item" href="#">Bihar</a>
-    <a className="dropdown-item" href="#">Chattisgarh</a>
-<a className="dropdown-item" href="#">Chandigarh</a>
-    <a className="dropdown-item" href="#">Goa</a>
-<a className="dropdown-item" href="#">Gujarat</a>
-    <a className="dropdown-item" href="#">Haryana</a>
-    <a className="dropdown-item" href="#">Himachal Pradesh</a>
-<a className="dropdown-item" href="#">Jharkhand</a>
-    <a className="dropdown-item" href="#">Karnataka</a>
-    <a className="dropdown-item" href="#">Kerala</a>
-<a className="dropdown-item" href="#">Madhya Pradesh</a>
-    <a className="dropdown-item" href="#">Maharashtra</a>
-    <a className="dropdown-item" href="#">Manipur</a>
-<a className="dropdown-item" href="#">Meghalaya</a>
-    <a className="dropdown-item" href="#">Mizoram</a>
-    <a className="dropdown-item" href="#">Nagaland</a>
-<a className="dropdown-item" href="#">Odhisa</a>
-    <a className="dropdown-item" href="#">Punjab</a>
-    <a className="dropdown-item" href="#">Rajasthan</a>
-<a className="dropdown-item" href="#">Sikkim</a>
-    <a className="dropdown-item" href="#">Tamil Nadu</a>
-    <a className="dropdown-item" href="#">Telangana</a>
- <a className="dropdown-item" href="#">Uttar Pradesh</a>
-<a className="dropdown-item" href="#">UttaraKhand</a>
-<a className="dropdown-item" href="#">West Bengal</a>
-
-  </div>
 </div>
+
 </div>
               }
             </Route>

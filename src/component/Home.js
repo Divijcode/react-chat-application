@@ -3,7 +3,6 @@ import { Box, Flex } from "@chakra-ui/core"
 import Message from "./min-component/message";
 import Header from "./min-component/header";
 import * as firebase from "firebase";
-import Welcome from "./Welcome";
 import {database} from "firebase/app";
 // import "firebase/database";
 // // import firebase from "firebase/app";
@@ -163,7 +162,32 @@ class Home extends Component {
                                     getMessageFromRoom={this.getMessageFromRoom}
                                     loadingData={this.state.loadingData}
                                 /> */}
+                                <Box
+                    w="30%"
+                    h="80vh"
+                    shadow="lg"
+                    roundedBottomRight="md"
+                    bg="gray.600"
+                >
+                <center>
+                                <div style={{ padding:" 15px 15px 15px 15px"}}>
+                                <br/><br/>
+                                <textarea  placeholder="Type your request..."className=" form-rounded form-control rounded-20" id="exampleFormControlTextarea1" rows="10"></textarea>
+                                <br/><br/>
 
+                                <button  type="button" class="btn btn-danger">Post a Request</button>
+                                <div class="form-check">
+  {/* <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+  <label class="form-check-label" for="flexCheckDefault">
+    Send to all Users
+  </label>
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+  <label class="form-check-label" for="flexCheckDefault">
+    Send to all Users
+  </label> */}
+</div>
+                                </div></center>
+</Box>
                                 <Message
                                     userId={this.state.userId}
                                     userName={this.state.userName}

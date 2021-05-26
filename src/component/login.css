@@ -3,11 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-body
-{
-    background-image: url('/1.jpg');
-    font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
+
+body{
+    background-image: url('/1.jpg') !important;
+    font-family: 'Poppins', sans-serif;   
+}
+
+.login-div{
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;

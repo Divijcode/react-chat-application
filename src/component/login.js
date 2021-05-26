@@ -73,7 +73,7 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className="login-div">
       <div  className="row mb-5">
         <div  className="bg mt-2 col-md-12 align-middle" bg="red.200" flexDirection="column" justifyContent="center" alignItems="center" textAlign="center" h="300vh">
          <div className="container" >

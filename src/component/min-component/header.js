@@ -13,32 +13,23 @@ class Header extends Component {
         return (
             <React.Fragment>
                 <Flex borderBottom="1px solid gray" bg="white" roundedTop="md">
-                    <Box w="100%" p={4}>
-                        <Stack isInline>
-                            <Image
-                                size="35px"
-                                src="/cat.png"
-                                alt="logo"
+                   
+                       
+                            <img
+                            style={{width:"200px" ,height:"100px"}}
+                               
+                                src="/logo4.png"
                             />
-                            <Text marginTop={2} fontWeight={600} color="orange.300">
-                                Cat Chat
-                            </Text>
-                        </Stack>
-                    </Box>
+                            
+                        
                     <Box w="100%" p={4} display="flex" flexDirection="row-reverse">
-                        <Menu>
-                            <MenuButton as={Button} rightIcon="chevron-down" paddingLeft=".5rem">
-                                <Avatar
-                                    size="sm"
-                                    marginRight="5px"
-                                    src={this.props.profile_picture}
-                                />
-                                {this.props.fullName}
-                            </MenuButton>
-                            <MenuList onClick={this.props.logout}>
-                                <MenuItem>Logout</MenuItem>
-                            </MenuList>
-                        </Menu>
+                        
+                                
+                            
+                            <button  type="button" class="btn btn-dark" onClick={this.props.logout}>
+                            Logout
+                            </button>
+        
                     </Box>
                 </Flex>
             </React.Fragment>

@@ -85,7 +85,7 @@ class Message extends Component {
                                                                 {conversation.msg}
                                                             </Text>
                                                             <Text color="gray.500" fontSize={11}>
-                                                                - {conversation.name} • {moment(conversation.time).fromNow()}
+                                                                - {conversation.name} • 
                                                             </Text>
                                                         </Stack>
                                                     </TagLabel>
